@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:2000"; // Change this to your server URL
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:2000"; // Change this to your server URL
 
 export const authService = {
   // Register a new user

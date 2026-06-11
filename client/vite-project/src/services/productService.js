@@ -1,6 +1,6 @@
 import { authService } from './authService';
 
-const BASE_URL = "http://localhost:2000";
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:2000";
 
 // Get all products
 export const getAllProducts = async () => {

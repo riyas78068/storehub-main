@@ -4,7 +4,15 @@ const bcrypt = require('bcrypt');
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
 
+
 const app = express();
+app.use(cors({
+  origin: [
+    "https://storehub-main.vercel.app",
+    "http://localhost:5173"  // for local dev
+  ],
+  credentials: true,
+}));
 const ADMIN_SECRET = process.env.ADMIN_SECRET || 'SUPER_ADMIN_SECRET';
 
 // Enable CORS for all routes
