@@ -144,7 +144,7 @@ import { getAllProducts } from '../services/productService'
                   </div>
                   
                   <button className="w-full mt-3 px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium text-sm">Add to Cart</button>
-                  <Link to="/product" className="w-full mt-2 px-3 py-2 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200 transition font-medium text-sm block text-center">View Details</Link>
+                  <Link to={`/product/${product.product_id}`} className="w-full mt-2 px-3 py-2 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200 transition font-medium text-sm block text-center">View Details</Link>
                 </div>
               </div>
             ))}

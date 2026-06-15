@@ -9,6 +9,7 @@ import Addproduct from '../components/Addproduct'
 import Contact from '../components/Contact'
 import Home from '../components/Home'
 import Product from '../components/product'
+import ViewProduct from '../components/ViewProduct'
 
 
 
@@ -33,6 +34,10 @@ export const rout = createBrowserRouter([
             {
                 path:"/product",
                 element:<ProtectedRoute><Product/></ProtectedRoute>
+            },
+            {
+                path:"/product/:id",
+                element:<ProtectedRoute><ViewProduct/></ProtectedRoute>
             },
             {
                 path:"/contact",
