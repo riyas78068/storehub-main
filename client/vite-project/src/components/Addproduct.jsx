@@ -106,7 +106,7 @@ export default function Addproduct() {
       })
       fetchProducts()
     } catch (err) {
-      setError(editingId ? 'Failed to update product' : 'Failed to add product')
+      setError(err.message || (editingId ? 'Failed to update product' : 'Failed to add product'))
       console.error(err)
     } finally {
       setLoading(false)
